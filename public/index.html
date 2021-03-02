@@ -3,264 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Registration</title>
+ 
+<script type="text/javascript">
+ 
+ function ValidName() {
+    let re = /S+[А-яа-яA-z]/;
+    let myPhone = document.getElementById('name').value;
+    let valid = re.test(myName);
+    if (valid) output = 'Имя введено верно!';
+    else output = 'Имя введено неверно!';
+    document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
+    return valid;
+}  
+ 
+function ValidPhone() {
+    let re = /^\d[\d\(\)\ -]{4,14}\d$/;
+    let myPhone = document.getElementById('phone').value;
+    let valid = re.test(myPhone);
+    if (valid) output = 'Номер телефона введен верно!';
+    else output = 'Номер телефона введен неверно!';
+    document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
+    return valid;
+}  
+ 
+
+function ValidMail() {
+    let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+    let myMail = document.getElementById('email').value;
+    let valid = re.test(myMail);
+    if (valid) output = 'Адрес эл. почты введен верно!';
+    else output = 'Адрес электронной почты введен неверно!';
+    document.getElementById('message').innerHTML = output;
+    return valid;
+}
+
+</script>
+
 </head>
+
 <body>
-    <script src="js/script.js"></script>
-    <header class="header center">
-        <div class="header__left">
-            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
-            <a href="catalog.html"><img class="header__search" src="img/search.svg" alt="search"></a>
-        </div>
-        <div class="header__right">
-            <a href="catalog.html"><img src="img/menu.svg" alt="menu"></a>
-            <a href="registration.html"> <img class="header__profile" src="img/profile.svg" alt="profile"></a>
-            <a href="cart.html"> <img src="img/basket.svg" alt="basket"> </a>
-        </div>
-    </header>
-    <section class="promo">
-        <div class="promo__left">
-            <img class="promo__img" src="img/promo_img.png" alt="promo">
-        </div>
-        <div class="promo__right">
-            <div class="promo__content">
-                <h1 class="promo__heading">THE BRAND</h1>
-                <p class="promo__text">OF LUXERIOUS</p>
-                <p class="catalog__heading">FASHION</p>
-            </div>
-        </div>
-    </section>
-    <section class="catalog-box">
-        <div class="catalog center">
-            <div class="catalog__item">
-                <img class="catalog__img" src="img/catalog1.png" alt="catalog1">
-                <div class="catalog__content">
-                    <p class="catalog__text">30% OFF</p>
-                    <h3 class="catalog__heading">FOR WOMEN</h3>
-                </div>
-            </div>
-            <div class="catalog__item">
-                <img class="catalog__img" src="img/catalog2.png" alt="catalog2">
-                <div class="catalog__content">
-                    <p class="catalog__text">30% OFF</p>
-                    <h3 class="catalog__heading">FOR WOMEN</h3>
-                </div>
-            </div>
-            <div class="catalog__item">
-                <img class="catalog__img" src="img/catalog3.png" alt="catalog3">
-                <div class="catalog__content">
-                    <p class="catalog__text">30% OFF</p>
-                    <h3 class="catalog__heading">FOR WOMEN</h3>
-                </div>
-            </div>
-        </div>
-    
-        <div class="img__big center">
-            <img class="catalog__img" src="img/catalog_big.png" alt="catalog big img">
-       
-        <div class="catalog__content">
-                    <p class="catalog__text">LUXIROUS & TRENDY</p>
-                    <h3 class="catalog__heading">ACCESORIES</h3>
-        </div>
-    </div>
-    </section>
-    <section class="product-box center">
-        <h2 class="product-box__heading">Fetured Items</h2>
-        <p class="product-box__text">
-            Shop for items based on what we featured in this week
-        </p>
-        <div class="product-content">
-            <div class="product product_mb">
-                <a href="product.html">
-                    <img class="product__img" src="img/catalog4.png" alt="photo product">
-                </a>
-                <a class="product__add" href="#">
-                    <img src="img/cart.svg" alt="cart"> Add to Cart
-                </a>
-                <div class="product__info">
-                    <a href="product.html" class="product__name">ELLERY X M'O CAPSULE</a>
-                    <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <div class="product__price">$52.00</div>
-                </div>
-            </div>
-            <div class="product product_mb">
-                <a href="product.html">
-                    <img class="product__img" src="img/catalog5.png" alt="photo product">
-                </a>
-                <a class="product__add" href="#">
-                    <img src="img/cart.svg" alt="cart"> Add to Cart
-                </a>
-                <div class="product__info">
-                    <a href="product.html" class="product__name">ELLERY X M'O CAPSULE</a>
-                    <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <div class="product__price">$52.00</div>
-                </div>
-            </div>
-            <div class="product product_mb">
-                <a href="product.html">
-                    <img class="product__img" src="img/catalog6.png" alt="photo product">
-                </a>
-                <a class="product__add" href="#">
-                    <img src="img/cart.svg" alt="cart"> Add to Cart
-                </a>
-                <div class="product__info">
-                    <a href="product.html" class="product__name">ELLERY X M'O CAPSULE</a>
-                    <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <div class="product__price">$52.00</div>
-                </div>
-            </div>
-            <div class="product product_mb">
-                <a href="product.html">
-                    <img class="product__img" src="img/catalog7.png" alt="photo product">
-                </a>
-                <a class="product__add" href="#">
-                    <img src="img/cart.svg" alt="cart"> Add to Cart
-                </a>
-                <div class="product__info">
-                    <a href="product.html" class="product__name">ELLERY X M'O CAPSULE</a>
-                    <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <div class="product__price">$52.00</div>
-                </div>
-            </div>
-            <div class="product product_mb">
-                <a href="product.html">
-                    <img class="product__img" src="img/catalog8.png" alt="photo product">
-                </a>
-                <a class="product__add" href="#">
-                    <img src="img/cart.svg" alt="cart"> Add to Cart
-                </a>
-                <div class="product__info">
-                    <a href="product.html" class="product__name">ELLERY X M'O CAPSULE</a>
-                    <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <div class="product__price">$52.00</div>
-                </div>
-            </div>
-            <div class="product product_mb">
-                <a href="product.html">
-                    <img class="product__img" src="img/catalog9.png" alt="photo product">
-                </a>
-                <a class="product__add" href="#">
-                    <img src="img/cart.svg" alt="cart"> Add to Cart
-                </a>
-                <div class="product__info">
-                    <a href="product.html" class="product__name">ELLERY X M'O CAPSULE</a>
-                    <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <div class="product__price">$52.00</div>
-                </div>
-            </div>
-     </div> 
-     
 
-    </section>
-    
    
-        
-       <div class="browse__form center">
-    <form action="#" class="browse__form">
-       <button class="browse__button center">  <p class="browse__button_text"> Browse All Product </p> </button>
-    </form>
-</div>
-    
-     
-</div>
+<p id="message" >Пожалуйста, заполните все поля формы</p> 
 
-
-<footer> 
-    <div class="footer">
-         <section class="footer__top center">
-            <div class="footer__product">
-                <img src="img/footer1.svg" alt="footer1">
-             
-                <div class="footer__heading">
-                    <a href="product.html" class="footer__heading">Free Delivery</a>
-                    <p class="footer__heading_text">Worldwide delivery on all. Authorit tively morph <br> next-generation innov tion with extensive models.</p>
-                  </div>
-                </div>
-               
-                            
-                <div class="footer__product">
-                    <img src="img/footer2.svg" alt="footer2">
-                 
-                       <div class="footer__heading">
-                        <a href="product.html" class="footer__heading">Sales & discounts</a>
-                        <p class="footer__heading_text">Worldwide delivery on all. Authorit tively morph <br> next-generation innov tion with extensive models.</p>
-                      </div>
-                    </div>
-
-                    <div class="footer__product">
-                        <img src="img/footer3.svg" alt="footer3">
-                     
-                           <div class="footer__heading">
-                            <a href="product.html" class="footer__heading">Quality assurance</a>
-                            <p class="footer__heading_text">Worldwide delivery on all. Authorit tively morph <br> next-generation innov tion with extensive models.</p>
-                          </div>
-                        </div>
-                 
-          
-                 </section> 
-            
-            
-            
-             
-             
-             <div class="subscribe">
-                
-                <div class="subscribe__left"> 
-                <img class="footer__photo" src="img/photo_footer1.svg" alt="photo_footer1">
-                <p class="subscribe__left_text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“ </p>
-                </div>
-              
-           
-           <div class="subscribe__right"> 
-              
-                <h3 class="subscribe__heading">
-                    SUBSCRIBE 
-                </h3>
-                <p class="subscribe__text">FOR OUR NEWLETTER AND PROMOTION</p>
-               
-                <form action="#" class="subscribe__form_button">
-                    
-                    <input type="email" class="input__subscribe" name="Enter Your Email" placeholder="Enter Your Email"><button class="subscribe__button">SUBSCRIBE</button>
-                    </div>
-                </form>
-            
-               
-            </div>              
-        </div>   
-            
-     
-                      <div class="footer__bottom center">
-                     
-                        <div class="footer__left">
-            <p class="footer__copy"> &copy   2021  Brand  All Rights Reserved.</p>
-             </div>    
-             
-            <div class="footer__right">
-            <div class="footer__icons">
-                <a href="#" class="footer__icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <img src="img/pin1.svg" alt="pin1">
-                </a>
-                
-                 <a href="#" class="footer__icon">
-                    <img src="img/pin2.svg" alt="pin2">
-                </a>
-                
-                <a href="#" class="footer__icon">
-                    <img src="img/pin3.svg" alt="pin3">
-                </a>
-                
-                <a href="#" class="footer__icon">
-                    <img src="img/pin4.svg" alt="pin4">
-                </a>
-                 </div>
-            </div>
-        </div>
-          </div>
-    
-        </footer>              
-
-        
+Имя: <input id="name" name="name" type="text" size="20" /><br /> 
+E-mail: <input id="email" name="email" type="text" size="20" /><br /> 
+Телефон: <input id="phone" name="phone" type="text" size="20" /><br /> 
+<input name="button" type="submit" value="Проверить" onClick="ValidMail(); ValidPhone();" />
 </body>
+
 </html>
