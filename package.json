@@ -1,0 +1,33 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack serve --hot --config webpack.dev.config.js"
+    },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/SvetlanaD1984/DZjavascript"
+  },
+  "author": "Svetlana",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.2",
+    "style-loader": "^2.0.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
+
+
